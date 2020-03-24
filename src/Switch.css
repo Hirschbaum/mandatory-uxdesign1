@@ -6,7 +6,7 @@
   position: relative;
   display: inline-block;
   width: 36px; /*spec from Material Components*/
-  height: 13px;
+  height: 0.8em;
 }
   
 /*---to make the input invisible---*/
@@ -30,7 +30,7 @@
 /*---thumb on the track---*/
 .track:after {
   position: absolute;
-  content: "";
+  content: '';
   height: 20px; /*spec from Material Components*/
   width: 20px; /*spec from Material Components*/
   left: -4px;
@@ -59,7 +59,7 @@ input:checked + .track {
 /*----disabled thumb on the right side of the track------*/
 .disabled-thumb:disabled + .track:after {
   background-color:#9E9E9E;
-  left: 20px;
+  left: 20px; /*spec from Material Components*/
 }
 
 /*----track should be rounded at the ends---*/

@@ -6,7 +6,7 @@ class Switch extends React.Component {
     render() {
         return (
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <p>Notifications (on/off)</p>
+                <h4>Notifications (on/off)</h4>
 
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <div className='switch__outline' style={{ display: 'flex', flexDirection: 'column' }}>

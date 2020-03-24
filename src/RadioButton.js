@@ -6,16 +6,13 @@ class RadioButton extends React.Component {
         return (
             <div
                 style={{
-                    marginTop: '90px',
                     display: 'flex',
                     flexDirection: 'column'
                 }}
             >
-
-                <br />
                 
                 <div>
-                    <p>Carrier:</p>
+                    <h4>Carrier:</h4>
                     <label className='radio' htmlFor='dhl'>DHL
                         <input
                             type='radio'

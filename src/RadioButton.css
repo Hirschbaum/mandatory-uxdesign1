@@ -1,77 +1,80 @@
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*----- container for the own radio buttons -----*/
-.radio-container {
-    position: relative;
-    display: block;
-    padding-left: 2em;
-    margin-bottom: 0.7em;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1.55em;
+.radio {
+  position: relative;
+  display: block;
+  padding-left: 2em;
+  margin-bottom: 0.7em;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.55em;
 }
 
 /*----- hide the default radio buttons -----*/
-.radio-container input {
-    opacity: 0;
-    position: absolute;
-    cursor: pointer;
+.radio input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
 }
 
 /*----- the new radio buttons -----*/
 .radio__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    border: 0.15em solid #00897B;
-    border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25em;
+  width: 1.25em;
+  border: 0.15em solid #00897B;
+  border-radius: 50%;
 }
 
 /*----- if hovering, background-color should be this -----*/
-.radio-container:hover input ~ .radio__checkmark {
-    background-color: #80CBC4;
+.radio:hover input ~ .radio__checkmark {
+  background-color: #80CBC4;
 }
 
 /*----- no hovering effect on diabled radio button -----*/
 .radio--disabled:hover input ~ .radio__checkmark--disabled {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 /*----- disabled radio button should be gray -----*/
 .radio__checkmark--disabled {
-    border: 0.15em solid  #9E9E9E; 
+  border: 0.15em solid  #9E9E9E; 
 }
 
-
 /*----- the dot in the new radio button -----*/
-.radio-container .radio__checkmark:after {
-    box-sizing: border-box;
-    top: 3px;
-    left: 3px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #00897B;
+.radio .radio__checkmark:after {
+  box-sizing: border-box;
+  top: 0.2em;
+  left: 0.2em;
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+  background: #00897B;
 }
 
 /*----- if the radio button checked, background shold be this -----*/
-.radio-container input:checked ~ .radio__checkmark {
-    background-color: #fff;
+.radio input:checked ~ .radio__checkmark {
+  background-color: #fff;
 }
   
 /*----- the dot, which hidden, if not checked -----*/
 .radio__checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: '';
+  position: absolute;
+  display: none;
 }
 
 /*----- if checked, show the dot -----*/
-.radio-container input:checked ~ .radio__checkmark:after {
-    display: block;
+.radio input:checked ~ .radio__checkmark:after {
+  display: block;
 }
-  
+
+/*----- if focus on the radio button, show outline -----*/
+.radio input[type='radio']:focus + .radio__checkmark {
+  outline: #FB8C00 auto 5px;
+}

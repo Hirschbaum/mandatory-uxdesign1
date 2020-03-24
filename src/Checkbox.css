@@ -5,17 +5,18 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.checkbox-container {
+.checkbox-label {
     display: block;
     position: relative;
     font-size: 16px;
     padding: 0.2em 0 0 2em;
     margin-bottom: 0.7em;
     cursor: pointer;
+    
 }
   
 /*------ to hide the default checkbox ------*/
-.checkbox-container input {
+.checkbox-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -34,18 +35,29 @@
     border-radius: 0.15rem;
 }
 
+/*----- checkmark should look like this -----*/
+.checkbox-label .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 13px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
 /*----- if hovering, show an other background-color -----*/
 .checkbox-container:hover input ~ .checkmark {
-    background-color:#00ACC1;
+    background-color:#B2DFDB;
 }
 
 /*----- if the checkbox is checked, background-color should be this -----*/
-.checkbox-container input:checked ~ .checkmark {
+.checkbox-label input:checked ~ .checkmark {
     background-color: #00838f;
 }
 
 /*----- if the checkbox is disabled, then background-color should be that -----*/
-.checkbox-container input:disabled ~ .checkmark {
+.checkbox-label input:disabled ~ .checkmark {
     background-color: #eee;
 }
   
@@ -57,18 +69,11 @@
 }
 
 /*----- display the checkmark, when input is checked -----*/
-.checkbox-container input:checked ~ .checkmark:after {
+.checkbox-label input:checked ~ .checkmark:after {
     display: block;
 }
   
-/*----- checkmark should look like this -----*/
-.checkbox-container .checkmark:after {
-    left: 8px;
-    top: 4px;
-    width: 5px;
-    height: 13px;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+/*----- if focus on the checkbox, show outline -----*/
+.checkbox-container input[type='checkbox']:focus + .checkmark {
+    outline: #FB8C00 auto 5px;
 }
-  

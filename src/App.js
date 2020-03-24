@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <TextField />
-      <Switch />
       <Checkbox />
+      <Switch />
       <RadioButton />
     </div>
   );

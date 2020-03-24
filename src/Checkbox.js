@@ -4,6 +4,7 @@ import './Checkbox.css';
 class Checkbox extends React.Component {
 
     render() {
+       
         return (
             <div
                 style={{
@@ -12,11 +13,13 @@ class Checkbox extends React.Component {
                     alignItems: 'flex-start'
                 }}>
 
-                <div>
-                <label 
-                    className='checkbox-container' 
+                <div aria-label='home delivery option' className='checkbox-container'>
+                <label
+                    className='checkbox-label' 
                     htmlFor='delivery-home'>home delivery    
                     <input
+                        
+                        className='checkbox__input'
                         type='checkbox'
                         name='delivery-home'
                         id='delivery-home'
@@ -26,9 +29,9 @@ class Checkbox extends React.Component {
                 </div>
 
                 {/*disabled option*/}
-                <div>
+                <div aria-label='disabled option delivery to post'>
                 <label
-                        className='checkbox-container'
+                        className='checkbox-label'
                         htmlFor='delivery-post'
                         style={{ color: '#bbb' }}>collect at post office
                     <input

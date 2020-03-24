@@ -3,71 +3,76 @@
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 36px; /*spec from Material Components*/
-    height: 13px;
-  }
+  position: relative;
+  display: inline-block;
+  width: 36px; /*spec from Material Components*/
+  height: 13px;
+}
   
-  /*---to make the input invisible---*/
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+/*---to make the input invisible---*/
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
   
-  .track {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #4DB6AC;
-    transition: .4s;
-  }
+.track {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4DB6AC;
+  transition: 0.35s;
+}
   
-  /*---thumb on the track---*/
-  .track:after {
-    position: absolute;
-    content: "";
-    height: 20px; /*spec from Material Components*/
-    width: 20px; /*spec from Material Components*/
-    left: -4px;
-    bottom: -4px;
-    background-color: #00838f; 
-    transition: .4s;
-  }
+/*---thumb on the track---*/
+.track:after {
+  position: absolute;
+  content: "";
+  height: 20px; /*spec from Material Components*/
+  width: 20px; /*spec from Material Components*/
+  left: -4px;
+  bottom: -4px;
+  background-color: #00838f; 
+  transition: 0.35s;
+}
 
 
-  /*----- disabled track -----*/
-  input:disabled + .track {
-    background-color: #E0E0E0; 
-  }
+/*----- disabled track -----*/
+input:disabled + .track {
+  background-color: #E0E0E0; 
+}
     
-  /*--- thumb on the right side: off ---*/
-  input:checked + .track:after {
-    transform: translateX(25px);
-    background-color: #9E9E9E;
-  }
+/*--- thumb on the right side: off ---*/
+input:checked + .track:after {
+  transform: translateX(25px);
+  background-color: #9E9E9E;
+}
 
-  /*--- truck, if thumb is on the right side ---*/
-  input:checked + .track {
-    background-color: #E0E0E0;
-  }
+/*--- truck, if thumb is on the right side ---*/
+input:checked + .track {
+  background-color: #E0E0E0;
+}
   
-  /*----disabled thumb on the right side of the track------*/
-  .disabled-thumb:disabled + .track:after {
-      background-color:#9E9E9E;
-      left: 20px;
-  }
+/*----disabled thumb on the right side of the track------*/
+.disabled-thumb:disabled + .track:after {
+  background-color:#9E9E9E;
+  left: 20px;
+}
 
-  /*----track should be rounded at the ends---*/
-  .track {
-    border-radius: 0.5em;
-  }
+/*----track should be rounded at the ends---*/
+.track {
+  border-radius: 0.5em;
+}
   
-  /*---thumb should be a circle---*/
-  .track:after {
-    border-radius: 50%;
-  }
+/*---thumb should be a circle---*/
+.track:after {
+  border-radius: 50%;
+}
+
+/*----- if focus on the switch, show outline -----*/
+.switch__outline input[type='checkbox']:focus + .track {
+  outline: #FB8C00 auto 0.3em;
+}

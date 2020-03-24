@@ -74,3 +74,12 @@ label.field-active {
   font-size: 0.4em;
 }
 
+.container:hover input  {
+  background-color:#B2DFDB;
+}
+
+/*----- if focus on the checkbox, show outline ----- not so nice...
+.container input[type='text']:focus + .border {
+  outline: #FB8C00 auto 5px;
+}
+*/

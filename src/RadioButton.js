@@ -13,9 +13,10 @@ class RadioButton extends React.Component {
             >
 
                 <br />
+                
                 <div>
                     <p>Carrier:</p>
-                    <label className='radio-container' htmlFor='dhl'>DHL
+                    <label className='radio' htmlFor='dhl'>DHL
                         <input
                             type='radio'
                             name='carrier'
@@ -26,7 +27,7 @@ class RadioButton extends React.Component {
                 </div>
 
                 <div>
-                    <label className='radio-container' htmlFor='brings'>Brings
+                    <label className='radio' htmlFor='brings'>Brings
                         <input
                             type='radio'
                             name='carrier'
@@ -37,7 +38,7 @@ class RadioButton extends React.Component {
                 </div>
 
                 <div>
-                    <label style={{color: '#9E9E9E'}} className='radio-container radio--disabled' htmlFor='drone'>drone
+                    <label style={{color: '#9E9E9E'}} className='radio radio--disabled' htmlFor='drone'>drone
                         <input
                             type='radio'
                             name='carrier'

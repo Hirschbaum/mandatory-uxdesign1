@@ -1,6 +1,74 @@
-input {
-    width: 24px;
-    height: 24px;
+/*----- cant style default checkbox -----*/
+/*----- better: hide the default checkbox, make an own ------*/
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-/*better: hide the default checkbox, make an own*/
+.checkbox-container {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    padding: 0.2em 0 0 2em;
+    margin-bottom: 0.7em;
+    cursor: pointer;
+}
+  
+/*------ to hide the default checkbox ------*/
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 1px;
+    width: 1px;
+}
+  
+/*----- own checkbox before label-text -----*/
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px; /*----- specs from Material Design Component -----*/
+    width: 24px;  /*----- specs from Material Design Component -----*/
+    background-color: #eee;
+    border-radius: 0.15rem;
+}
+
+/*----- if hovering, show an other background-color -----*/
+.checkbox-container:hover input ~ .checkmark {
+    background-color:#00ACC1;
+}
+
+/*----- if the checkbox is checked, background-color should be this -----*/
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #00838f;
+}
+
+/*----- if the checkbox is disabled, then background-color should be that -----*/
+.checkbox-container input:disabled ~ .checkmark {
+    background-color: #eee;
+}
+  
+/*-----  the hidden checkmark, if it is not checked -----*/
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/*----- display the checkmark, when input is checked -----*/
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+/*----- checkmark should look like this -----*/
+.checkbox-container .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 13px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+  

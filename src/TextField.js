@@ -49,23 +49,6 @@ class TextField extends React.Component {
                     />
                     <span className='border'></span>
                 </div>
-
-                <br />
-
-               {/* <div className='container'>
-                    <label
-                        style={{ position: 'absolute', top: '10px', left: '5px', fontSize: '16px' }}
-                        className={this.state.fieldActive ? 'field-active' : ''}
-                        htmlFor='street'>Street
-                    </label>
-                    <input
-                        className='input'
-                        id='street'
-                        type='text'
-                    />
-                    <span className='border'></span>
-                </div>
-        */}
             </div>
         )
     }

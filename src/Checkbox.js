@@ -6,7 +6,6 @@ class Checkbox extends React.Component {
     render() {
         return (
             <div
-                className='checkbox-container'
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -14,30 +13,32 @@ class Checkbox extends React.Component {
                 }}>
 
                 <div>
+                <label 
+                    className='checkbox-container' 
+                    htmlFor='delivery-home'>home delivery    
                     <input
                         type='checkbox'
                         name='delivery-home'
                         id='delivery-home'
                     />
-                    <label
-                        htmlFor='delivery-home'>
-                        home delivery
+                    <span className="checkmark"></span>
                     </label>
                 </div>
 
                 {/*disabled option*/}
                 <div>
+                <label
+                        className='checkbox-container'
+                        htmlFor='delivery-post'
+                        style={{ color: '#bbb' }}>collect at post office
                     <input
                         className='delivery-post'
-                        disabled='disabled'
+                        disabled='disabled' /*this makes the input disabled*/
                         type='checkbox'
                         name='delivery-post'
                         id="delivery-post"
                     />
-                    <label
-                        htmlFor='delivery-post'
-                        style={{ color: 'silver' }}>
-                    collect at post office
+                    <span className="checkmark"></span>
                     </label>
                 </div>
             </div>

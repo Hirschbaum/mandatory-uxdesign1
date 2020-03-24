@@ -7,21 +7,22 @@ class Switch extends React.Component {
 
     render() {
         return (
-            <div style={{position: 'relative'}}>
-                
+            <div style={{position: 'relative', width: '240px'}}>
+            <p style={{position: 'absolute', top: '64px'}}>Notifications (on/off)</p>
             {/*on/off switch */}
-                <label className='switch' style={{position: 'absolute', left: 10, top: '100px'}}>
+            <p style={{position: 'absolute', left: 10, top: '128px'}}>sms</p>
+                <label className='switch' style={{position: 'absolute', left: 10, top: '112px'}}>
                     <input type='checkbox' />
                     <span className='track'></span>
                 </label>
-                <p style={{position: 'absolute', left: 10, top: '122px'}}>on/off</p>
+                
 
             {/* disabled switch */}
-                <label className='switch switch--chekced' style={{position: 'absolute', left: 60, top: 100}}>
-                    <input type='checkbox' className='disabled-thumb' checked/>
+                <label className='switch switch--chekced' style={{position: 'absolute', left: 100, top: 112}}>
+                    <input type='checkbox' disabled='disabled' className='disabled-thumb'/>
                     <span className='track'></span>
                 </label>
-                <p style={{position: 'absolute', left: 60, top: '122px'}}>disabled</p>
+                <p style={{position: 'absolute', left: 100, top: '128px'}}>pigeon</p>
             </div>
         )
     }

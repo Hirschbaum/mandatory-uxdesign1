@@ -1,15 +1,52 @@
 import React from 'react';
+import './RadioButton.css';
 
 class RadioButton extends React.Component {
     render() {
         return (
-            <div style={{marginTop: '90px'}}>
-                <br/>
-                <p>Carrier:</p>
-                <input type='radio' name='carrier' id='dhl'/>
-                <label htmlFor='dhl'>DHL</label>
-                <input type='radio' name='carrier' id='brings'/>
-                <label htmlFor='brings'>Brings</label>
+            <div
+                style={{
+                    marginTop: '90px',
+                    display: 'flex',
+                    flexDirection: 'column'
+                }}
+            >
+
+                <br />
+                <div>
+                    <p>Carrier:</p>
+                    <label className='radio-container' htmlFor='dhl'>DHL
+                        <input
+                            type='radio'
+                            name='carrier'
+                            id='dhl'
+                        />
+                        <span className='radio__checkmark'></span>
+                    </label>
+                </div>
+
+                <div>
+                    <label className='radio-container' htmlFor='brings'>Brings
+                        <input
+                            type='radio'
+                            name='carrier'
+                            id='brings'
+                        />
+                        <span className='radio__checkmark'></span>
+                    </label>
+                </div>
+
+                <div>
+                    <label style={{color: '#9E9E9E'}} className='radio-container radio--disabled' htmlFor='drone'>drone
+                        <input
+                            type='radio'
+                            name='carrier'
+                            id='drone'
+                            disabled='disabled' /*this makes the input disabled*/
+                        />
+                        <span className='radio__checkmark radio__checkmark--disabled'></span>
+                    </label>
+                </div>
             </div>
         )
     }

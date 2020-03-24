@@ -23,9 +23,10 @@ body {
 .container {
   width: 200px;
   position: relative;
+  margin-bottom: 10px;
 }
 
-input[type="text"] {
+input[type='text'] {
   width: 100%;
   font-size: 16px;
   height: 1.5em;
@@ -35,9 +36,9 @@ input[type="text"] {
 .input {
   border: 0;
   padding: 19px 0;
-  background-color:  rgb(233, 231, 231);
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
+  background-color: #EEEEEE;
+  border-top-left-radius: 0.15rem;
+  border-top-right-radius: 0.15rem;
 }
 
 .input ~ .border {
@@ -45,8 +46,8 @@ input[type="text"] {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: rgb(138, 43, 226);
+  height: 0.15em;
+  background-color: #00838f;
 }
 
 .input > label {
@@ -64,12 +65,12 @@ input[type="text"] {
 }
 
 .input:focus {
-  background-color: rgb(207, 204, 204);
+  background-color: #E0E0E0;
 }
 
 label.field-active {
   transform: translateY(-12px);
-  color: rgb(138, 43, 226);
+  color: #00838f;
   font-size: 0.4em;
 }
 

@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #CE93D8;
+    background-color: #4DB6AC;
     transition: .4s;
   }
   
@@ -35,29 +35,31 @@
     width: 20px; /*spec from Material Components*/
     left: -4px;
     bottom: -4px;
-    background-color: #6A1B9A; /*#7B1FA2*/
+    background-color: #00838f; 
     transition: .4s;
   }
-  
 
-  /*-----disabled track---*/
-  input:checked + .track {
-    background-color:  rgb(200, 199, 201); 
+
+  /*----- disabled track -----*/
+  input:disabled + .track {
+    background-color: #E0E0E0; 
   }
-  
-  /*---tracks color when thumb on the left side---*/
-  input:focus + .track {
-    box-shadow: 0 0 0.1em #CE93D8; 
-  }
-  
-  /*---thumb on the right side---*/
+    
+  /*--- thumb on the right side: off ---*/
   input:checked + .track:after {
     transform: translateX(25px);
+    background-color: #9E9E9E;
+  }
+
+  /*--- truck, if thumb is on the right side ---*/
+  input:checked + .track {
+    background-color: #E0E0E0;
   }
   
-  /*----disabled thumb------*/
-  .disabled-thumb:checked + .track:after {
-      background-color: rgb(151, 150, 150);
+  /*----disabled thumb on the right side of the track------*/
+  .disabled-thumb:disabled + .track:after {
+      background-color:#9E9E9E;
+      left: 20px;
   }
 
   /*----track should be rounded at the ends---*/

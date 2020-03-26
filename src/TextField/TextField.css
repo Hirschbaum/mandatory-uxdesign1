@@ -1,0 +1,65 @@
+/*--------- Text Field ----------*/
+  
+  .textfield-container {
+    width: 200px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  input[type='text'] {
+    width: 100%;
+    font-size: 16px;
+    height: 1.5em;
+  }
+  
+  .textfield__input {
+    border: 0;
+    padding: 19px 0;
+    background-color: #EEEEEE;
+    border-top-left-radius: 0.15rem;
+    border-top-right-radius: 0.15rem;
+  }
+  
+  .textfield__input ~ .textfield--border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.15em;
+    background-color: #00838f;
+  }
+  
+  .textfield__input > label {
+    position: absolute;
+    left: 20px;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    transition: all .1s ease-in-out;
+  }
+  
+  .textfield__input:focus ~ .textfield--border {
+    width: 100%;
+    transition: 0.001s;
+  }
+  
+  .textfield__input:focus {
+    background-color: #E0E0E0;
+  }
+  
+  label.field-active {
+    transform: translateY(-12px);
+    color: #00838f;
+    font-size: 0.4em;
+  }
+  
+  .textfield-container:hover input  {
+    background-color:#B2DFDB;
+  }
+  
+  /*----- if focus on the checkbox, show outline ----- not so nice...
+  .textfield-container input[type='text']:focus + .textfield--border {
+    outline: #FB8C00 auto 5px;
+  }
+  */
+  

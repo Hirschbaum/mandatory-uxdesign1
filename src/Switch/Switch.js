@@ -26,6 +26,7 @@ class Switch extends React.Component {
                         <p>sms</p>
                     </div>
                 </div>
+
             </div>
         )
     }

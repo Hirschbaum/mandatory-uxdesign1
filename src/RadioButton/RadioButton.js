@@ -11,8 +11,9 @@ class RadioButton extends React.Component {
                 }}
             >
                 
-                <div>
+                <div className='radio--outline'>
                     <h4>Carrier:</h4>
+
                     <label className='radio' htmlFor='dhl'>DHL
                         <input
                             type='radio'
@@ -23,23 +24,23 @@ class RadioButton extends React.Component {
                     </label>
                 </div>
 
-                <div>
-                    <label className='radio' htmlFor='brings'>Brings
+                <div className='radio--outline'>
+                    <label className='radio' htmlFor='brings'>Bring
                         <input
                             type='radio'
                             name='carrier'
-                            id='brings'
+                            id='bring'
                         />
                         <span className='radio__checkmark'></span>
                     </label>
                 </div>
 
                 <div>
-                    <label style={{color: '#9E9E9E'}} className='radio radio--disabled' htmlFor='drone'>drone
+                    <label style={{color: '#9E9E9E'}} className='radio radio--disabled' htmlFor='drone'>Schenker
                         <input
                             type='radio'
                             name='carrier'
-                            id='drone'
+                            id='schenker'
                             disabled='disabled' /*this makes the input disabled*/
                         />
                         <span className='radio__checkmark radio__checkmark--disabled'></span>

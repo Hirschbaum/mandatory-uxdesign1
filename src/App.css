@@ -13,8 +13,6 @@ h4 {
   flex-direction: column;
 }
 
-/*--------- Text Field ----------*/
-
 body {
   background-color: #fff;
   margin-left: 25px;
@@ -23,66 +21,3 @@ body {
 :focus {
   outline: none;
 }
-
-.container {
-  width: 200px;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-input[type='text'] {
-  width: 100%;
-  font-size: 16px;
-  height: 1.5em;
-}
-
-.input {
-  border: 0;
-  padding: 19px 0;
-  background-color: #EEEEEE;
-  border-top-left-radius: 0.15rem;
-  border-top-right-radius: 0.15rem;
-}
-
-.input ~ .border {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0.15em;
-  background-color: #00838f;
-}
-
-.input > label {
-  position: absolute;
-  left: 20px;
-  display: inline-block;
-  font-size: 20px;
-  letter-spacing: 0.05em;
-  transition: all .1s ease-in-out;
-}
-
-.input:focus ~ .border {
-  width: 100%;
-  transition: 0.001s;
-}
-
-.input:focus {
-  background-color: #E0E0E0;
-}
-
-label.field-active {
-  transform: translateY(-12px);
-  color: #00838f;
-  font-size: 0.4em;
-}
-
-.container:hover input  {
-  background-color:#B2DFDB;
-}
-
-/*----- if focus on the checkbox, show outline ----- not so nice...
-.container input[type='text']:focus + .border {
-  outline: #FB8C00 auto 5px;
-}
-*/
